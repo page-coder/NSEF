@@ -1,0 +1,2 @@
+/* Admin data is never stored in the browser. This page only calls Supabase after setup. */
+document.addEventListener('DOMContentLoaded',()=>{const note=document.querySelector('#admin-state');const cfg=window.NSEF_CONFIG;if(!cfg?.supabaseUrl||!cfg?.supabaseAnonKey){note.textContent='Setup required: add public Supabase project settings to admin/config.js, then configure the database policies in README.md.';return}note.textContent='Configuration detected. Complete the Supabase authentication integration before using this desk.'});
